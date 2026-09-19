@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import UserContextProvider from './context/UserContextProvider'
+import Login from './Component/Login'
+import Profile from './Component/Profile'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-   <>
-   <h1>Hello react</h1>
-   </>
+   <UserContextProvider>
+    <h1>Hello! we are learning React Context API </h1>
+    <Login/>
+    <Profile/>
+   </UserContextProvider>
   )
 }
 
